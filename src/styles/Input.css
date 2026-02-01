@@ -1,11 +1,13 @@
 .card {
-  background: var(--gradient);
-  border: 1px solid var(--border);
+  background-color: var(--bg);
+  border: 1px solid var(--bg);
   border-top: 1px solid var(--highlight);
   border-radius: 10px;
+  box-shadow: var(--shadow);
   max-width: 600px;
   display: flex;
   flex-direction: column;
+  gap: 5px;
   padding: 20px;
   margin: 20px;
 }
@@ -14,4 +16,14 @@ input {
   border: none;
   border-radius: 5px;
   padding: 5px;
+}
+
+textarea {
+  border: none;
+}
+
+.btn-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }

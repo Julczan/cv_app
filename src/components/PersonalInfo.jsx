@@ -1,5 +1,6 @@
 import "../styles/Input.css";
 import { Input } from "./Input";
+import Button from "./Button";
 
 function PersonalInfo() {
   return (
@@ -9,6 +10,10 @@ function PersonalInfo() {
       <Input label={"Email"} id={"emailInput"} />
       <Input label={"Phone number"} id={"phoneInput"} />
       <Input label={"Address"} id={"addressInput"} />
+      <div className="btn-container">
+        <Button action={"Cancel"} />
+        <Button action={"Save"} />
+      </div>
     </div>
   );
 }
