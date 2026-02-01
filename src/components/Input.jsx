@@ -16,4 +16,13 @@ function DateInput({ label, value, id }) {
   );
 }
 
-export { Input, DateInput };
+function TextAreaInput({ label, value, id }) {
+  return (
+    <>
+      <label htmlFor={id}>{label}</label>
+      <textarea id={id} name={id} value={value} />
+    </>
+  );
+}
+
+export { Input, DateInput, TextAreaInput };
