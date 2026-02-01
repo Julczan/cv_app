@@ -1,5 +1,5 @@
 import "../styles/Input.css";
-import Input from "./Input";
+import { Input } from "./Input";
 
 function PersonalInfo() {
   return (

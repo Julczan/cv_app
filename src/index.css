@@ -70,7 +70,7 @@ h6 {
 :root {
   --bg-dark: oklch(0.1 0 80);
   --bg: oklch(0.15 0 80);
-  --bg-light: oklch(0.2 0 80);
+  --bg-light: oklch(0.23 0 80);
   --gradient: linear-gradient(0deg, var(--bg), var(--bg-light));
   --text: oklch(0.96 0 80);
   --text-muted: oklch(0.76 0 80);
