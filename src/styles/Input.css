@@ -1,0 +1,16 @@
+.card {
+  background: var(--gradient);
+  border: 1px solid var(--border);
+  border-top: 1px solid var(--highlight);
+  border-radius: 10px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}

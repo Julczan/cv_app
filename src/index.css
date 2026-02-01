@@ -71,6 +71,7 @@ h6 {
   --bg-dark: oklch(0.1 0 80);
   --bg: oklch(0.15 0 80);
   --bg-light: oklch(0.2 0 80);
+  --gradient: linear-gradient(0deg, var(--bg), var(--bg-light));
   --text: oklch(0.96 0 80);
   --text-muted: oklch(0.76 0 80);
   --highlight: oklch(0.5 0 80);
@@ -87,5 +88,10 @@ h6 {
 }
 
 body {
-  background-color: var(--bg);
+  background-color: var(--bg-dark);
+  color: var(--text-muted);
+}
+
+h1 {
+  color: var(--text);
 }

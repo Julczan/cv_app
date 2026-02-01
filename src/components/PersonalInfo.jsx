@@ -1,21 +1,15 @@
+import "../styles/Input.css";
+import Input from "./Input";
+
 function PersonalInfo() {
   return (
     <div className="card">
       <h1>Personal Details</h1>
-      <Input label={"Full name"} />
-      <Input label={"Email"} />
-      <Input label={"Phone number"} />
-      <Input label={"Address"} />
+      <Input label={"Full name"} id={"nameInput"} />
+      <Input label={"Email"} id={"emailInput"} />
+      <Input label={"Phone number"} id={"phoneInput"} />
+      <Input label={"Address"} id={"addressInput"} />
     </div>
-  );
-}
-
-function Input({ label, value }) {
-  return (
-    <>
-      <label htmlFor={label}>{label}</label>
-      <input value={value} id={value} />
-    </>
   );
 }
 
