@@ -1,0 +1,19 @@
+.card-output {
+  background-color: var(--bg);
+  box-shadow: var(--shadow);
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  gap: 5px;
+  margin: 20px;
+  min-height: 900px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.output-header {
+  background-color: rgb(214, 214, 214);
+}

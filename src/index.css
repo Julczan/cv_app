@@ -102,4 +102,10 @@ button {
   border-radius: 5px;
   border-top: var(--highlight);
   box-shadow: var(--shadow);
+  color: var(--text);
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

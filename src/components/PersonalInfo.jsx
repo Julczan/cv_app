@@ -1,4 +1,3 @@
-import "../styles/Input.css";
 import { Input } from "./Input";
 import Button from "./Button";
 
