@@ -1,7 +1,6 @@
 import { Input } from "./Input";
-import Button from "./Button";
 
-function PersonalInfo() {
+function PersonalInfo({ onClick }) {
   return (
     <div className="card">
       <h1>Personal Details</h1>
@@ -10,8 +9,8 @@ function PersonalInfo() {
       <Input label={"Phone number"} id={"phoneInput"} />
       <Input label={"Address"} id={"addressInput"} />
       <div className="btn-container">
-        <Button action={"Cancel"} />
-        <Button action={"Save"} />
+        <button onClick={onClick}>Cancel</button>
+        <button>Save</button>
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import { Input, TextAreaInput, DateInput } from "./Input";
-import Button from "./Button";
 
 function Experience() {
   return (
@@ -15,8 +14,8 @@ function Experience() {
       <DateInput label={"End Date"} id={"endExpInput"} />
 
       <div className="btn-container">
-        <Button action={"Cancel"} />
-        <Button action={"Save"} />
+        <button>Cancel</button>
+        <button>Save</button>
       </div>
     </div>
   );
