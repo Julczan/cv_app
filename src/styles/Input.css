@@ -10,6 +10,33 @@
   gap: 5px;
   padding: 20px;
   margin: 20px;
+  position: relative;
+}
+
+.card-unactive {
+  background-color: var(--bg);
+  border: 1px solid var(--bg);
+  border-top: 1px solid var(--highlight);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  gap: 5px;
+  padding: 20px;
+  margin: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+.show-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 input {

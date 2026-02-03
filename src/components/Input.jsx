@@ -1,8 +1,8 @@
-function Input({ label, value, id }) {
+function Input({ label, defaultValue, id }) {
   return (
     <>
       <label htmlFor={id}>{label}</label>
-      <input id={id} name={id} value={value} />
+      <input id={id} name={id} defaultValue={defaultValue} />
     </>
   );
 }
