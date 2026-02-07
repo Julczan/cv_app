@@ -3,12 +3,12 @@ import EducationInfo from "./EducationInfo";
 import PersonalInfo from "./PersonalInfo";
 import Experience from "./Experience";
 
-function InputSection({ props, onSubmit }) {
+function InputSection(props) {
   return (
     <div className="input-section">
-      <PersonalInfo props={props} onSubmit={onSubmit} />
+      <PersonalInfo info={props.personalInfo} />
       <EducationInfo />
-      <Experience />
+      <Experience addExperience={props.addExperience} />
     </div>
   );
 }

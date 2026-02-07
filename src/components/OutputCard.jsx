@@ -1,15 +1,15 @@
 import "../styles/Output.css";
 
-function OutputCard({ fullName, email, phone, address, experience }) {
+function OutputCard() {
   return (
     <div className="output-section">
       <div className="card-output">
         <div className="output-header">
-          <h1>{fullName}</h1>
+          <h1>{}</h1>
           <div className="contact">
-            <p>{email}</p>
-            <p>{phone}</p>
-            <p>{address}</p>
+            <p>{}</p>
+            <p>{}</p>
+            <p>{}</p>
           </div>
         </div>
         <div className="education-container">
@@ -25,17 +25,7 @@ function OutputCard({ fullName, email, phone, address, experience }) {
         <div className="experience-container">
           <h1>Work Experience</h1>
 
-          <ul>
-            {experience.map((exp) => (
-              <li key={exp.id}>
-                <h2>{exp.companyName}</h2>
-                <p>{exp.position}</p>
-                <p>
-                  {exp.startDate} - {exp.endDate}
-                </p>
-              </li>
-            ))}
-          </ul>
+          <ul></ul>
         </div>
       </div>
     </div>

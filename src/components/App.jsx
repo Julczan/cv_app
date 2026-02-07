@@ -1,39 +1,44 @@
 import { useState } from "react";
 import InputSection from "./InputSection";
 import OutputCard from "./OutputCard";
-import initialInfo from "./initialInfo";
 
-function App() {
-  const [info, setInfo] = useState(initialInfo);
+function App(props) {
+  const [personalInfo, setPersonalInfo] = useState(props.initialInfo.personal);
+  const [educationInfo, setEducationInfo] = useState(
+    props.initialInfo.education,
+  );
+  const [experienceInfo, setExperienceInfo] = useState(
+    props.initialInfo.experience,
+  );
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function addExperience({
+    companyName,
+    position,
+    responsibility,
+    startDate,
+    endDate,
+  }) {
+    const newExperience = {
+      id: "id",
+      companyName: companyName,
+      position: position,
+      responsibility: responsibility,
+      startDate: startDate,
+      endDate: endDate,
+    };
 
-    const form = e.target;
-
-    const formData = new FormData(form);
-
-    const formJson = Object.fromEntries(formData.entries());
-
-    setInfo({
-      ...info,
-      name: formJson.nameInput,
-      email: formJson.emailInput,
-      phone: formJson.phoneInput,
-      address: formJson.addressInput,
-    });
+    setEducationInfo([...experienceInfo, newExperience]);
   }
 
   return (
     <>
-      <InputSection props={info} onSubmit={handleSubmit} />
-      <OutputCard
-        fullName={info.name}
-        email={info.email}
-        phone={info.phone}
-        address={info.address}
-        experience={info.experience}
+      <InputSection
+        personalInfo={personalInfo}
+        educationInfo={educationInfo}
+        experienceInfo={experienceInfo}
+        addExperience={addExperience}
       />
+      <OutputCard />
     </>
   );
 }

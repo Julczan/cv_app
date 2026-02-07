@@ -1,8 +1,14 @@
-function Input({ label, defaultValue, id }) {
+function Input(props) {
   return (
     <>
-      <label htmlFor={id}>{label}</label>
-      <input id={id} name={id} defaultValue={defaultValue} />
+      <label htmlFor={props.id}>{props.label}</label>
+      <input
+        type="text"
+        id={props.id}
+        name={props.id}
+        value={props.value}
+        onChange={props.onChange}
+      />
     </>
   );
 }
