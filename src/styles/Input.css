@@ -30,6 +30,12 @@
 }
 
 .card-title {
+  background-color: var(--bg);
+  border: 1px solid var(--bg);
+  border-top: 1px solid var(--highlight);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   background-color: var(--bg-light);
