@@ -19,7 +19,7 @@ const DATA = {
   experience: [
     {
       id: "exp-0",
-      companyName: "Hard Rock",
+      companyName: "Hard Rock Cafe",
       position: "Host",
       responsibility: "Taking care of the reservations",
       startDate: "10/01/2020",

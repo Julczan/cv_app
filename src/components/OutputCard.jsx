@@ -1,6 +1,6 @@
 import "../styles/Output.css";
 
-function OutputCard() {
+function OutputCard(props) {
   return (
     <div className="output-section">
       <div className="card-output">
@@ -24,8 +24,17 @@ function OutputCard() {
 
         <div className="experience-container">
           <h1>Work Experience</h1>
-
-          <ul></ul>
+          {props.experienceInfo.map((experience) => (
+            <ul key={experience.id}>
+              <h2>
+                {experience.companyName} - {experience.position}
+              </h2>
+              <p>{experience.responsibility}</p>
+              <p>
+                {experience.startDate} - {experience.endDate}
+              </p>
+            </ul>
+          ))}
         </div>
       </div>
     </div>

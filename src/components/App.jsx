@@ -39,7 +39,7 @@ function App(props) {
         experienceInfo={experienceInfo}
         addExperience={addExperience}
       />
-      <OutputCard />
+      <OutputCard experienceInfo={experienceInfo} />
     </>
   );
 }
