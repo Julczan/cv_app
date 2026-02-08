@@ -7,7 +7,7 @@ function InputSection(props) {
   return (
     <div className="input-section">
       <PersonalInfo info={props.personalInfo} />
-      <EducationInfo />
+      <EducationInfo addEducation={props.addEducation} />
       <Experience addExperience={props.addExperience} />
     </div>
   );

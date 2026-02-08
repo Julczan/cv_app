@@ -66,7 +66,7 @@ function Experience(props) {
 
         <div className="btn-container">
           <button>Cancel</button>
-          <button>Save</button>
+          <button type="submit">Save</button>
         </div>
       </form>
     </div>

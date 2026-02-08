@@ -14,12 +14,16 @@ function OutputCard(props) {
         </div>
         <div className="education-container">
           <h1>Education</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            aperiam voluptate dolorem veniam error placeat dolore at eligendi
-            mollitia ipsa, expedita, facilis quod! Atque at tempora culpa animi,
-            reiciendis est.
-          </p>
+          {props.educationInfo.map((education) => (
+            <ul key={education.id}>
+              <h2>
+                {education.schoolName} - {education.title}
+              </h2>
+              <p>
+                {education.startDate} - {education.endDate}
+              </p>
+            </ul>
+          ))}
         </div>
 
         <div className="experience-container">

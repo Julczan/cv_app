@@ -31,6 +31,18 @@ function App(props) {
     setExperienceInfo([...experienceInfo, newExperience]);
   }
 
+  function addEducation({ schoolName, title, startDate, endDate }) {
+    const newEducation = {
+      id: `edu-${nanoid()}`,
+      schoolName: schoolName,
+      title: title,
+      startDate: startDate,
+      endDate: endDate,
+    };
+
+    setEducationInfo([...educationInfo, newEducation]);
+  }
+
   return (
     <>
       <InputSection
@@ -38,8 +50,12 @@ function App(props) {
         educationInfo={educationInfo}
         experienceInfo={experienceInfo}
         addExperience={addExperience}
+        addEducation={addEducation}
       />
-      <OutputCard experienceInfo={experienceInfo} />
+      <OutputCard
+        experienceInfo={experienceInfo}
+        educationInfo={educationInfo}
+      />
     </>
   );
 }
