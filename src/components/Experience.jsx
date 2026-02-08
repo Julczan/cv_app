@@ -11,12 +11,22 @@ function Experience(props) {
   });
 
   function handleChange(event) {
-    setExperienceInfo(event.target.value);
+    setExperienceInfo({
+      ...experienceInfo,
+      [event.target.name]: event.target.value,
+    });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
     props.addExperience(experienceInfo);
+    setExperienceInfo({
+      companyName: "",
+      position: "",
+      responsibility: "",
+      startDate: "",
+      endDate: "",
+    });
   }
 
   return (
@@ -25,17 +35,34 @@ function Experience(props) {
       <form action="post" onSubmit={handleSubmit}>
         <Input
           label={"Company Name"}
-          id={"companyInput"}
-          value={experienceInfo}
+          id={"companyName"}
+          value={experienceInfo.companyName}
           onChange={handleChange}
         />
-        <Input label={"Position Title"} id={"positionInput"} />
+        <Input
+          label={"Position Title"}
+          id={"position"}
+          value={experienceInfo.position}
+          onChange={handleChange}
+        />
         <TextAreaInput
           label={"Job Responsibilities"}
-          id={"responsibilityInput"}
+          id={"responsibility"}
+          value={experienceInfo.responsibility}
+          onChange={handleChange}
         />
-        <DateInput label={"Start Date"} id={"startExpInput"} />
-        <DateInput label={"End Date"} id={"endExpInput"} />
+        <DateInput
+          label={"Start Date"}
+          id={"startDate"}
+          value={experienceInfo.startDate}
+          onChange={handleChange}
+        />
+        <DateInput
+          label={"End Date"}
+          id={"endDate"}
+          value={experienceInfo.endDate}
+          onChange={handleChange}
+        />
 
         <div className="btn-container">
           <button>Cancel</button>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InputSection from "./InputSection";
 import OutputCard from "./OutputCard";
+import { nanoid } from "nanoid";
 
 function App(props) {
   const [personalInfo, setPersonalInfo] = useState(props.initialInfo.personal);
@@ -19,7 +20,7 @@ function App(props) {
     endDate,
   }) {
     const newExperience = {
-      id: "id",
+      id: `exp-${nanoid()}`,
       companyName: companyName,
       position: position,
       responsibility: responsibility,
@@ -27,7 +28,7 @@ function App(props) {
       endDate: endDate,
     };
 
-    setEducationInfo([...experienceInfo, newExperience]);
+    setExperienceInfo([...experienceInfo, newExperience]);
   }
 
   return (

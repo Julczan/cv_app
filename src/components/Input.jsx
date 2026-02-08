@@ -13,20 +13,31 @@ function Input(props) {
   );
 }
 
-function DateInput({ label, value, id }) {
+function DateInput(props) {
   return (
     <>
-      <label htmlFor={id}>{label}</label>
-      <input id={id} name={id} value={value} type="date" />
+      <label htmlFor={props.id}>{props.label}</label>
+      <input
+        id={props.id}
+        name={props.id}
+        value={props.value}
+        type="date"
+        onChange={props.onChange}
+      />
     </>
   );
 }
 
-function TextAreaInput({ label, value, id }) {
+function TextAreaInput(props) {
   return (
     <>
-      <label htmlFor={id}>{label}</label>
-      <textarea id={id} name={id} value={value} />
+      <label htmlFor={props.id}>{props.label}</label>
+      <textarea
+        id={props.id}
+        name={props.id}
+        value={props.value}
+        onChange={props.onChange}
+      />
     </>
   );
 }
