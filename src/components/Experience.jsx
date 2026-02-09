@@ -87,7 +87,9 @@ function Experience(props) {
             <ul key={title.id} className="card-title">
               <h2>{title.companyName}</h2>
               <div className="card-title-btns">
-                <button>Delete</button>
+                <button onClick={() => props.deleteExperience(title.id)}>
+                  Delete
+                </button>
                 <button>Edit</button>
               </div>
             </ul>

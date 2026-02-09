@@ -74,12 +74,14 @@ function EducationInfo(props) {
         </div>
       ) : (
         <div className="card-unactive">
-          <h1>Experience</h1>
+          <h1>Education</h1>
           {props.educationTitles.map((title) => (
             <ul key={title.id} className="card-title">
               <h2>{title.schoolName}</h2>
               <div className="card-title-btns">
-                <button>Delete</button>
+                <button onClick={() => props.deleteEducation(title.id)}>
+                  Delete
+                </button>
                 <button>Edit</button>
               </div>
             </ul>

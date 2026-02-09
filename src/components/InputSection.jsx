@@ -10,9 +10,11 @@ function InputSection(props) {
       <EducationInfo
         addEducation={props.addEducation}
         educationTitles={props.educationInfo}
+        deleteEducation={props.deleteEducation}
       />
       <Experience
         addExperience={props.addExperience}
+        deleteExperience={props.deleteExperience}
         experienceTitles={props.experienceInfo}
       />
     </div>

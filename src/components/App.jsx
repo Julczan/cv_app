@@ -31,6 +31,14 @@ function App(props) {
     setExperienceInfo([...experienceInfo, newExperience]);
   }
 
+  function deleteExperience(id) {
+    const remainingExperience = experienceInfo.filter(
+      (experience) => id !== experience.id,
+    );
+
+    setExperienceInfo(remainingExperience);
+  }
+
   function addEducation({ schoolName, title, startDate, endDate }) {
     const newEducation = {
       id: `edu-${nanoid()}`,
@@ -43,6 +51,14 @@ function App(props) {
     setEducationInfo([...educationInfo, newEducation]);
   }
 
+  function deleteEducation(id) {
+    const remainingEducation = educationInfo.filter(
+      (education) => id !== education.id,
+    );
+
+    setEducationInfo(remainingEducation);
+  }
+
   return (
     <>
       <InputSection
@@ -50,7 +66,9 @@ function App(props) {
         educationInfo={educationInfo}
         experienceInfo={experienceInfo}
         addExperience={addExperience}
+        deleteExperience={deleteExperience}
         addEducation={addEducation}
+        deleteEducation={deleteEducation}
       />
       <OutputCard
         experienceInfo={experienceInfo}
