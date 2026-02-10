@@ -16,6 +16,7 @@ function InputSection(props) {
         addExperience={props.addExperience}
         deleteExperience={props.deleteExperience}
         experienceTitles={props.experienceInfo}
+        editExperience={props.editExperience}
       />
     </div>
   );

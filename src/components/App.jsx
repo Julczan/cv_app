@@ -31,6 +31,32 @@ function App(props) {
     setExperienceInfo([...experienceInfo, newExperience]);
   }
 
+  function editExperience(
+    id,
+    companyName,
+    position,
+    responsibility,
+    startDate,
+    endDate,
+  ) {
+    const editedExperience = experienceInfo.map((experience) => {
+      if (id === experience.id) {
+        return {
+          ...experience,
+          companyName: companyName,
+          position: position,
+          responsibility: responsibility,
+          startDate: startDate,
+          endDate: endDate,
+        };
+      }
+
+      return experience;
+    });
+
+    setExperienceInfo(editedExperience);
+  }
+
   function deleteExperience(id) {
     const remainingExperience = experienceInfo.filter(
       (experience) => id !== experience.id,
@@ -67,6 +93,7 @@ function App(props) {
         experienceInfo={experienceInfo}
         addExperience={addExperience}
         deleteExperience={deleteExperience}
+        editExperience={editExperience}
         addEducation={addEducation}
         deleteEducation={deleteEducation}
       />
