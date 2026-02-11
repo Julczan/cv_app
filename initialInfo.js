@@ -1,7 +1,7 @@
 const DATA = {
   personal: {
     id: "per-0",
-    name: "Julek",
+    name: "Michael Scott",
     email: "julek@gmail",
     phone: "123123",
     address: "Skotniki",
