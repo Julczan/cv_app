@@ -11,6 +11,7 @@ function InputSection(props) {
         addEducation={props.addEducation}
         educationTitles={props.educationInfo}
         deleteEducation={props.deleteEducation}
+        editEducation={props.editEducation}
       />
       <Experience
         addExperience={props.addExperience}

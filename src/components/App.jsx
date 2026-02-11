@@ -77,6 +77,24 @@ function App(props) {
     setEducationInfo([...educationInfo, newEducation]);
   }
 
+  function editEducation(id, newEducation) {
+    const editedEducation = educationInfo.map((education) => {
+      if (id === education.id) {
+        return {
+          ...education,
+          schoolName: newEducation.schoolName,
+          title: newEducation.title,
+          startDate: newEducation.startDate,
+          endDate: newEducation.endDate,
+        };
+      }
+
+      return education;
+    });
+
+    setEducationInfo(editedEducation);
+  }
+
   function deleteEducation(id) {
     const remainingEducation = educationInfo.filter(
       (education) => id !== education.id,
@@ -95,6 +113,7 @@ function App(props) {
         deleteExperience={deleteExperience}
         editExperience={editExperience}
         addEducation={addEducation}
+        editEducation={editEducation}
         deleteEducation={deleteEducation}
       />
       <OutputCard

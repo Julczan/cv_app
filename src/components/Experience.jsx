@@ -18,7 +18,7 @@ function Experience(props) {
     endDate: "",
   });
 
-  const [editingExp, setEditingExp] = useState(false);
+  const [editingExperience, setEditingExperience] = useState(false);
 
   const [formState, setFormState] = useState("hidden");
 
@@ -57,7 +57,7 @@ function Experience(props) {
   function handleSubmitUpdate(e) {
     e.preventDefault();
     props.editExperience(
-      editingExp.id,
+      editingExperience.id,
       newExperience.companyName,
       newExperience.position,
       newExperience.responsibility,
@@ -73,7 +73,7 @@ function Experience(props) {
     });
 
     handleFormState("hidden");
-    setEditingExp(false);
+    setEditingExperience(false);
   }
 
   const addForm = (
@@ -132,7 +132,7 @@ function Experience(props) {
             <button
               onClick={() => {
                 setFormState("editing");
-                setEditingExp(title);
+                setEditingExperience(title);
                 setNewExperience(title);
               }}
             >

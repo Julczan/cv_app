@@ -12,8 +12,8 @@ const DATA = {
       id: "edu-0",
       schoolName: "AGH",
       title: "budownictwo",
-      startDate: "10/01/2020",
-      endDate: "10/01/2025",
+      startDate: "2020-01-10",
+      endDate: "2025-01-10",
     },
   ],
 
@@ -23,8 +23,8 @@ const DATA = {
       companyName: "Hard Rock Cafe",
       position: "Host",
       responsibility: "Taking care of the reservations",
-      startDate: "10/01/2020",
-      endDate: "10/01/2025",
+      startDate: "2020-01-10",
+      endDate: "2025-01-10",
     },
   ],
 };
