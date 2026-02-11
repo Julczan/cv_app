@@ -8,6 +8,7 @@ function Input(props) {
         name={props.id}
         value={props.value}
         onChange={props.onChange}
+        autoComplete="no"
       />
     </>
   );
@@ -23,6 +24,7 @@ function DateInput(props) {
         value={props.value}
         type="date"
         onChange={props.onChange}
+        autoComplete="no"
       />
     </>
   );
@@ -37,6 +39,7 @@ function TextAreaInput(props) {
         name={props.id}
         value={props.value}
         onChange={props.onChange}
+        autoComplete="no"
       />
     </>
   );

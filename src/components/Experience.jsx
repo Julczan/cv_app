@@ -56,14 +56,7 @@ function Experience(props) {
 
   function handleSubmitUpdate(e) {
     e.preventDefault();
-    props.editExperience(
-      editingExperience.id,
-      newExperience.companyName,
-      newExperience.position,
-      newExperience.responsibility,
-      newExperience.startDate,
-      newExperience.endDate,
-    );
+    props.editExperience(editingExperience.id, newExperience);
     setNewExperience({
       companyName: "",
       position: "",

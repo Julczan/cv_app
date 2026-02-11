@@ -12,6 +12,17 @@ function App(props) {
     props.initialInfo.experience,
   );
 
+  function addPersonalInfo({ name, email, phone, address }) {
+    const newPersonalInfo = {
+      name: name,
+      email: email,
+      phone: phone,
+      address: address,
+    };
+
+    setPersonalInfo(newPersonalInfo);
+  }
+
   function addExperience({
     companyName,
     position,
@@ -31,23 +42,16 @@ function App(props) {
     setExperienceInfo([...experienceInfo, newExperience]);
   }
 
-  function editExperience(
-    id,
-    companyName,
-    position,
-    responsibility,
-    startDate,
-    endDate,
-  ) {
+  function editExperience(id, newExperience) {
     const editedExperience = experienceInfo.map((experience) => {
       if (id === experience.id) {
         return {
           ...experience,
-          companyName: companyName,
-          position: position,
-          responsibility: responsibility,
-          startDate: startDate,
-          endDate: endDate,
+          companyName: newExperience.companyName,
+          position: newExperience.position,
+          responsibility: newExperience.responsibility,
+          startDate: newExperience.startDate,
+          endDate: newExperience.endDate,
         };
       }
 
@@ -106,9 +110,10 @@ function App(props) {
   return (
     <>
       <InputSection
-        personalInfo={personalInfo}
+        initialInfo={personalInfo}
         educationInfo={educationInfo}
         experienceInfo={experienceInfo}
+        addPersonalInfo={addPersonalInfo}
         addExperience={addExperience}
         deleteExperience={deleteExperience}
         editExperience={editExperience}
@@ -117,6 +122,7 @@ function App(props) {
         deleteEducation={deleteEducation}
       />
       <OutputCard
+        personalInfo={personalInfo}
         experienceInfo={experienceInfo}
         educationInfo={educationInfo}
       />

@@ -6,7 +6,10 @@ import Experience from "./Experience";
 function InputSection(props) {
   return (
     <div className="input-section">
-      <PersonalInfo info={props.personalInfo} />
+      <PersonalInfo
+        addPersonalInfo={props.addPersonalInfo}
+        initialInfo={props.initialInfo}
+      />
       <EducationInfo
         addEducation={props.addEducation}
         educationTitles={props.educationInfo}

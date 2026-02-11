@@ -1,8 +1,19 @@
+import { useState } from "react";
 import { Input } from "./Input";
 
-function PersonalInfo() {
+function PersonalInfo(props) {
+  const [personalInfo, setPersonalInfo] = useState(props.initialInfo);
+
   function handleSubmit(e) {
     e.preventDefault();
+    props.addPersonalInfo(personalInfo);
+  }
+
+  function handleChange(e) {
+    setPersonalInfo({
+      ...personalInfo,
+      [e.target.name]: [e.target.value],
+    });
   }
 
   return (
@@ -11,10 +22,30 @@ function PersonalInfo() {
         <h1>Personal Information</h1>
         <button className="show-btn"></button>
         <form action="post" onSubmit={handleSubmit}>
-          <Input label={"Full name"} id={"nameInput"} />
-          <Input label={"Email"} id={"emailInput"} />
-          <Input label={"Phone number"} id={"phoneInput"} />
-          <Input label={"Address"} id={"addressInput"} />
+          <Input
+            label={"Full name"}
+            id={"name"}
+            value={personalInfo.name}
+            onChange={handleChange}
+          />
+          <Input
+            label={"Email"}
+            id={"email"}
+            value={personalInfo.email}
+            onChange={handleChange}
+          />
+          <Input
+            label={"Phone number"}
+            id={"phone"}
+            value={personalInfo.phone}
+            onChange={handleChange}
+          />
+          <Input
+            label={"Address"}
+            id={"address"}
+            value={personalInfo.address}
+            onChange={handleChange}
+          />
           <div className="btn-container">
             <button>Cancel</button>
             <button type="submit">Save</button>

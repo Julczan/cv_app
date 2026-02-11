@@ -5,11 +5,11 @@ function OutputCard(props) {
     <div className="output-section">
       <div className="card-output">
         <div className="output-header">
-          <h1>{}</h1>
+          <h1>{props.personalInfo.name}</h1>
           <div className="contact">
-            <p>{}</p>
-            <p>{}</p>
-            <p>{}</p>
+            <p>{props.personalInfo.email}</p>
+            <p>{props.personalInfo.phone}</p>
+            <p>{props.personalInfo.address}</p>
           </div>
         </div>
         <div className="education-container">
