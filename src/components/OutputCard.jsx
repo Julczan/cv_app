@@ -12,15 +12,15 @@ function OutputCard(props) {
           <h1>{props.personalInfo.name}</h1>
           <div className="contact">
             <p>
-              <Icon path={mdiEmailOutline} size={1} className="icon" />
+              <Icon path={mdiEmailOutline} size={1} className="icon personal" />
               {props.personalInfo.email}
             </p>
             <p>
-              <Icon path={mdiPhone} size={1} className="icon" />
+              <Icon path={mdiPhone} size={1} className="icon personal" />
               {props.personalInfo.phone}
             </p>
             <p>
-              <Icon path={mdiMapMarker} size={1} className="icon" />
+              <Icon path={mdiMapMarker} size={1} className="icon personal" />
               {props.personalInfo.address}
             </p>
           </div>

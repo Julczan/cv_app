@@ -3,6 +3,7 @@ import { Input, TextAreaInput, DateInput } from "./Input";
 import Icon from "@mdi/react";
 import { mdiDelete } from "@mdi/js";
 import { mdiFileEditOutline } from "@mdi/js";
+import { mdiPlus } from "@mdi/js";
 
 function Experience(props) {
   const [experienceInfo, setExperienceInfo] = useState({
@@ -142,7 +143,10 @@ function Experience(props) {
           </div>
         </ul>
       ))}
-      <button onClick={() => handleFormState("shown")}>Add Experience</button>
+      <button onClick={() => handleFormState("shown")}>
+        <Icon path={mdiPlus} size={1} className="icon" />
+        Add Experience
+      </button>
     </div>
   );
 

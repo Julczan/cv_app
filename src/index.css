@@ -67,6 +67,15 @@ h6 {
   isolation: isolate;
 }
 
+@keyframes dropdown {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
 :root {
   --bg-dark: oklch(0.92 0 20);
   --bg: oklch(0.96 0 20);
@@ -106,6 +115,13 @@ button {
   border-top: var(--highlight);
   box-shadow: var(--shadow);
   color: var(--text);
+  cursor: pointer;
+  will-change: transform;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
 }
 
 #root {
@@ -128,5 +144,8 @@ p {
 
 .icon {
   position: absolute;
+}
+
+.personal {
   left: -30px;
 }

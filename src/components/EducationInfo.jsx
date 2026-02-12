@@ -3,6 +3,7 @@ import { Input, DateInput } from "./Input";
 import Icon from "@mdi/react";
 import { mdiDelete } from "@mdi/js";
 import { mdiFileEditOutline } from "@mdi/js";
+import { mdiPlus } from "@mdi/js";
 
 function EducationInfo(props) {
   const [educationInfo, setEducationInfo] = useState({
@@ -132,7 +133,10 @@ function EducationInfo(props) {
           </div>
         </ul>
       ))}
-      <button onClick={() => handleFormState("shown")}>Add Education</button>
+      <button onClick={() => handleFormState("shown")} className="add-button">
+        <Icon path={mdiPlus} size={1} className="icon" />
+        Add Education
+      </button>
     </div>
   );
 

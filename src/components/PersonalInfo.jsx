@@ -62,7 +62,7 @@ function PersonalInfo(props) {
           </form>
         </div>
       ) : (
-        <div className="card">
+        <div className="card-unactive">
           <h1>Personal Information</h1>
           <button className="show-btn" onClick={handleShow}>
             <Icon path={mdiMenuDown} size={1} />

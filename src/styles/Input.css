@@ -41,6 +41,11 @@
   background-color: var(--bg-light);
 }
 
+.card-title-btns {
+  display: flex;
+  gap: 10px;
+}
+
 .show-btn {
   position: absolute;
   right: 20px;
@@ -52,6 +57,8 @@ form {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  transform-origin: top;
+  animation: dropdown 0.3s ease-in-out;
 }
 
 input {
@@ -90,4 +97,8 @@ button[type="submit"] {
   position: absolute;
   left: -5px;
   padding-left: 5px;
+}
+
+.add-btn {
+  position: relative;
 }
