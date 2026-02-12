@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Input } from "./Input";
+import Icon from "@mdi/react";
+import { mdiMenuDown } from "@mdi/js";
 
 function PersonalInfo(props) {
   const [personalInfo, setPersonalInfo] = useState(props.initialInfo);
@@ -26,7 +28,9 @@ function PersonalInfo(props) {
       {shown ? (
         <div className="card">
           <h1>Personal Information</h1>
-          <button className="show-btn" onClick={handleShow}></button>
+          <button className="show-btn" onClick={handleShow}>
+            <Icon path={mdiMenuDown} size={1} vertical />
+          </button>
           <form action="post" onSubmit={handleSubmit}>
             <Input
               label={"Full name"}
@@ -53,7 +57,6 @@ function PersonalInfo(props) {
               onChange={handleChange}
             />
             <div className="btn-container">
-              <button>Cancel</button>
               <button type="submit">Save</button>
             </div>
           </form>
@@ -61,7 +64,9 @@ function PersonalInfo(props) {
       ) : (
         <div className="card">
           <h1>Personal Information</h1>
-          <button className="show-btn" onClick={handleShow}></button>
+          <button className="show-btn" onClick={handleShow}>
+            <Icon path={mdiMenuDown} size={1} />
+          </button>
         </div>
       )}
     </>

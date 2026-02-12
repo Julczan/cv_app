@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Input, TextAreaInput, DateInput } from "./Input";
+import Icon from "@mdi/react";
+import { mdiDelete } from "@mdi/js";
+import { mdiFileEditOutline } from "@mdi/js";
 
 function Experience(props) {
   const [experienceInfo, setExperienceInfo] = useState({
@@ -105,7 +108,6 @@ function Experience(props) {
         />
 
         <div className="btn-container">
-          <button>Cancel</button>
           <button type="submit">Save</button>
         </div>
       </form>
@@ -119,24 +121,28 @@ function Experience(props) {
         <ul key={title.id} className="card-title">
           <h2>{title.companyName}</h2>
           <div className="card-title-btns">
-            <button onClick={() => props.deleteExperience(title.id)}>
+            <button
+              className="delete-btn"
+              onClick={() => props.deleteExperience(title.id)}
+            >
+              <Icon className="icon-delete" path={mdiDelete} size={1} />
               Delete
             </button>
             <button
+              className="edit-btn"
               onClick={() => {
                 setFormState("editing");
                 setEditingExperience(title);
                 setNewExperience(title);
               }}
             >
+              <Icon path={mdiFileEditOutline} size={1} className="icon-edit" />
               Edit
             </button>
           </div>
         </ul>
       ))}
-      <button onClick={() => handleFormState("shown")}>
-        Add new experience
-      </button>
+      <button onClick={() => handleFormState("shown")}>Add Experience</button>
     </div>
   );
 
@@ -176,7 +182,6 @@ function Experience(props) {
         />
 
         <div className="btn-container">
-          <button>Cancel</button>
           <button type="submit">Save</button>
         </div>
       </form>

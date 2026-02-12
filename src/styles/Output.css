@@ -1,19 +1,32 @@
 .card-output {
-  background-color: var(--bg);
+  background-color: var(--bg-light);
   box-shadow: var(--shadow);
-  display: flex;
-  padding: 10px;
-  flex-direction: column;
   gap: 5px;
   margin: 20px;
   min-height: 900px;
+  display: flex;
+}
+
+.output-header {
+  background-color: rgb(215, 248, 255);
+  flex: 1 1 0;
 }
 
 .contact {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 30px;
+  padding-left: 40px;
 }
 
-.output-header {
-  background-color: rgb(214, 214, 214);
+.output-header > h1 {
+  text-align: center;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1 1 0;
 }
