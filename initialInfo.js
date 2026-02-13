@@ -2,16 +2,16 @@ const DATA = {
   personal: {
     id: "per-0",
     name: "Michael Scott",
-    email: "julek@gmail.com",
+    email: "michael@gmail.com",
     phone: "123-123-123",
-    address: "Krakow",
+    address: "Scranton",
   },
 
   education: [
     {
       id: "edu-0",
-      schoolName: "AGH",
-      title: "budownictwo",
+      schoolName: "Harvard",
+      title: "Economics",
       startDate: "2020-01-10",
       endDate: "2025-01-10",
     },
@@ -20,9 +20,17 @@ const DATA = {
   experience: [
     {
       id: "exp-0",
-      companyName: "Hard Rock Cafe",
-      position: "Host",
-      responsibility: "Taking care of the reservations",
+      companyName: "Dunder Mifflin Paper Company",
+      position: "Manger",
+      responsibility: "Taking care of the office",
+      startDate: "2020-01-10",
+      endDate: "2025-01-10",
+    },
+    {
+      id: "exp-1",
+      companyName: "Michael Scott Paper Company",
+      position: "Owner",
+      responsibility: "Owner of the company",
       startDate: "2020-01-10",
       endDate: "2025-01-10",
     },

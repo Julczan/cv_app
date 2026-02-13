@@ -118,6 +118,7 @@ button {
   cursor: pointer;
   will-change: transform;
   transition: transform 0.2s;
+  max-height: 35px;
 }
 
 button:hover {

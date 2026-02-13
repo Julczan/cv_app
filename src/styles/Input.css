@@ -58,7 +58,7 @@ form {
   flex-direction: column;
   gap: 5px;
   transform-origin: top;
-  animation: dropdown 0.3s ease-in-out;
+  animation: dropdown 0.2s ease-in-out;
 }
 
 input {
@@ -75,6 +75,7 @@ textarea {
   margin-top: 10px;
   display: flex;
   justify-content: flex-end;
+  align-self: center;
 }
 
 button[type="submit"] {
