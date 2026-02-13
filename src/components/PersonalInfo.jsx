@@ -14,6 +14,7 @@ function PersonalInfo(props) {
   function handleSubmit(e) {
     e.preventDefault();
     props.addPersonalInfo(personalInfo);
+    handleShow();
   }
 
   function handleChange(e) {
