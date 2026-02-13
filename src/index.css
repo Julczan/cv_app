@@ -67,6 +67,13 @@ h6 {
   isolation: isolate;
 }
 
+@media (max-width: 800px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @keyframes dropdown {
   0% {
     transform: scaleY(0);
