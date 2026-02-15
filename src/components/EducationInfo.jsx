@@ -109,7 +109,7 @@ function EducationInfo(props) {
     <div className="card-unactive">
       <h1>Education</h1>
       {props.educationTitles.map((title) => (
-        <ul key={title.id} className="card-title">
+        <div key={title.id} className="card-title">
           <h2>{title.schoolName}</h2>
           <div className="card-title-btns">
             <button
@@ -131,7 +131,7 @@ function EducationInfo(props) {
               Edit
             </button>
           </div>
-        </ul>
+        </div>
       ))}
       <button onClick={() => handleFormState("shown")} className="add-button">
         <Icon path={mdiPlus} size={1} className="icon" />

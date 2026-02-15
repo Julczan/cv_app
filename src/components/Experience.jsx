@@ -119,7 +119,7 @@ function Experience(props) {
     <div className="card-unactive">
       <h1>Experience</h1>
       {props.experienceTitles.map((title) => (
-        <ul key={title.id} className="card-title">
+        <div key={title.id} className="card-title">
           <h2>{title.companyName}</h2>
           <div className="card-title-btns">
             <button
@@ -141,7 +141,7 @@ function Experience(props) {
               Edit
             </button>
           </div>
-        </ul>
+        </div>
       ))}
       <button onClick={() => handleFormState("shown")}>
         <Icon path={mdiPlus} size={1} className="icon" />

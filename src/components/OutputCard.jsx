@@ -29,27 +29,27 @@ function OutputCard(props) {
           <div className="education-container">
             <h1>Education</h1>
             {props.educationInfo.map((education) => (
-              <ul key={education.id}>
+              <div className="container" key={education.id}>
                 <h2>{education.schoolName}</h2>
                 <h3>{education.title}</h3>
                 <p>
                   {education.startDate} - {education.endDate}
                 </p>
-              </ul>
+              </div>
             ))}
           </div>
 
           <div className="experience-container">
             <h1>Professional Experience</h1>
             {props.experienceInfo.map((experience) => (
-              <ul key={experience.id}>
+              <div className="container" key={experience.id}>
                 <h2>{experience.companyName}</h2>
                 <h3>{experience.position}</h3>
                 <h4>{experience.responsibility}</h4>
                 <p>
                   {experience.startDate} - {experience.endDate}
                 </p>
-              </ul>
+              </div>
             ))}
           </div>
         </div>

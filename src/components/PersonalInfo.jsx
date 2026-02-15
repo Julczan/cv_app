@@ -29,7 +29,11 @@ function PersonalInfo(props) {
       {shown ? (
         <div className="card">
           <h1>Personal Information</h1>
-          <button className="show-btn" onClick={handleShow}>
+          <button
+            className="show-btn"
+            aria-label="Hide form"
+            onClick={handleShow}
+          >
             <Icon path={mdiMenuDown} size={1} vertical />
           </button>
           <form action="post" onSubmit={handleSubmit}>
@@ -65,7 +69,11 @@ function PersonalInfo(props) {
       ) : (
         <div className="card-unactive">
           <h1>Personal Information</h1>
-          <button className="show-btn" onClick={handleShow}>
+          <button
+            className="show-btn"
+            aria-label="Hide Form"
+            onClick={handleShow}
+          >
             <Icon path={mdiMenuDown} size={1} />
           </button>
         </div>

@@ -109,23 +109,25 @@ function App(props) {
 
   return (
     <>
-      <InputSection
-        initialInfo={personalInfo}
-        educationInfo={educationInfo}
-        experienceInfo={experienceInfo}
-        addPersonalInfo={addPersonalInfo}
-        addExperience={addExperience}
-        deleteExperience={deleteExperience}
-        editExperience={editExperience}
-        addEducation={addEducation}
-        editEducation={editEducation}
-        deleteEducation={deleteEducation}
-      />
-      <OutputCard
-        personalInfo={personalInfo}
-        experienceInfo={experienceInfo}
-        educationInfo={educationInfo}
-      />
+      <main>
+        <InputSection
+          initialInfo={personalInfo}
+          educationInfo={educationInfo}
+          experienceInfo={experienceInfo}
+          addPersonalInfo={addPersonalInfo}
+          addExperience={addExperience}
+          deleteExperience={deleteExperience}
+          editExperience={editExperience}
+          addEducation={addEducation}
+          editEducation={editEducation}
+          deleteEducation={deleteEducation}
+        />
+        <OutputCard
+          personalInfo={personalInfo}
+          experienceInfo={experienceInfo}
+          educationInfo={educationInfo}
+        />
+      </main>
     </>
   );
 }

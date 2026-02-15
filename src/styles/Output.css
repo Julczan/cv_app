@@ -39,3 +39,7 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.container {
+  padding-left: 40px;
+}
